@@ -105,23 +105,79 @@ Application runs at `http://localhost:3000`
 
 ## 🔑 Configuration
 
-### Hugging Face API Setup
+Environment Variables
 
-1. **Get Groq key** (Free)
-   - Sign up at [GroqConsole](https://console.groq.com/keys)
-   - Go to Settings → Access Tokens
-   - Create new token with "read" access
+Create a .env file in the project root:
 
-2. **Configure key**
-   ```javascript
-   // src/services/aiService.js
-   const GroqKey  = "your_token_here";
-   ```
+Plain Text
 
-   **For production, use environment variables:**
-   ```bash
-   # .env
-   REACT_APP_HUGGINGFACE_TOKEN=your_token_here
+
+# Groq API Configuration
+# Get your free API key from: https://console.groq.com/keys
+VITE_GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxx
+
+
+
+Vite Configuration
+
+TypeScript
+
+
+// vite.config.ts
+export default defineConfig({
+  plugins: [react( ), tailwindcss()],
+  server: {
+    port: 3000,
+    open: true,
+  },
+  build: {
+    outDir: path.resolve(__dirname, 'dist'),
+    emptyOutDir: true,
+  },
+})
+
+
+
+Tailwind CSS
+
+Configured in client/src/index.css:
+
+CSS
+
+
+@import "tailwindcss";
+
+/* Medical color scheme */
+/* Blues: Primary actions and info */
+/* Greens: Success and normal status */
+/* Reds: Warnings and high risk */
+/* Oranges: Moderate risk */
+
+
+
+
+
+
+🔧 Available Commands
+
+Bash
+
+
+# Development
+pnpm dev              # Start development server (http://localhost:3000 )
+pnpm dev --port 3001 # Use different port
+
+# Production
+pnpm build            # Build for production
+pnpm preview          # Preview production build locally
+
+# Utilities
+pnpm check            # Type check with TypeScript
+pnpm format           # Format code with Prettier
+
+
+
+
    ```
 
 ---
@@ -145,27 +201,36 @@ Application runs at `http://localhost:3000`
 
 ### Example Analysis
 ```json
+// User uploads a blood test PDF
+// App automatically:
+// 1. Extracts text using Tesseract.js
+// 2. Sends to Groq API for analysis
+// 3. Parses structured JSON response
+// 4. Displays results in UI
+
+// Result structure:
 {
+  "summary": "Your blood test shows elevated glucose levels...",
   "metrics": [
     {
-      "name": "Glucose (Fasting)",
-      "value": "126 mg/dL",
+      "name": "Fasting Glucose",
+      "value": "145 mg/dL",
       "status": "high",
       "normal": "70-100 mg/dL"
     }
   ],
   "risks": [
     {
-      "condition": "Type 2 Diabetes",
-      "level": "High",
-      "percentage": 80,
-      "reason": "Fasting glucose at 126 mg/dL indicates diabetes threshold"
+      "condition": "Type 2 Diabetes Risk",
+      "level": "high",
+      "percentage": 75,
+      "reason": "Elevated fasting glucose levels"
     }
   ],
   "recommendations": [
-    "Consult an endocrinologist immediately",
-    "Reduce sugar and refined carbohydrate intake",
-    "Exercise 150+ minutes per week"
+    "Consult with an endocrinologist",
+    "Increase physical activity to 150 minutes/week",
+    "Reduce refined sugar and carbohydrate intake"
   ]
 }
 ```
@@ -175,25 +240,45 @@ Application runs at `http://localhost:3000`
 ## 🏗️ Project Structure
 
 ```
-medical-report-analyzer/
-├── public/
-│   └── index.html              # HTML template
-├── src/
-│   ├── App.js                  # Main application component
-│   ├── App.css                 # Styles
-│   ├── services/
-│   │   ├── aiService.js        # Mixtral AI integration
-│   │   └── ocrService.js       # Tesseract OCR service
-│   ├── utils/
-│   │   └── riskAnalyzer.js     # Medical risk calculations
-│   └── index.js                # Entry point
-├── docs/
-│   ├── screenshots/            # UI screenshots
-│   └── API.md                  # API documentation
-├── sample-reports/             # Test medical reports
-├── package.json
-├── README.md
-└── LICENSE
+medical-analyzer-v2/
+│
+├── client/                          # Frontend React application
+│   ├── index.html                  # HTML entry point
+│   ├── public/                     # Static assets
+│   │   └── vite.svg               # Vite logo
+│   │
+│   └── src/
+│       ├── main.tsx               # React entry point
+│       ├── App.tsx                # Main application component
+│       ├── index.css              # Global Tailwind styles
+│       │
+│       ├── services/              # Business logic services
+│       │   ├── groqService.ts     # Groq API integration
+│       │   │   ├── analyzeBloodReport()
+│       │   │   ├── parseResponse()
+│       │   │   └── validateMetrics()
+│       │   │
+│       │   └── ocrService.ts      # OCR text extraction
+│       │       ├── extractTextFromImage()
+│       │       ├── extractTextFromPDF()
+│       │       └── extractTextFromImageFile()
+│       │
+│       └── utils/                 # Utility functions
+│           └── toast.ts           # Toast notification system
+│               ├── toast.success()
+│               ├── toast.error()
+│               ├── toast.loading()
+│               └── toast.info()
+│
+├── .env                           # Environment variables (your API key)
+├── .env.example                   # Example environment file
+├── .gitignore                     # Git ignore rules
+├── package.json                   # Dependencies and scripts
+├── pnpm-lock.yaml                # Locked dependency versions
+├── vite.config.ts                # Vite configuration
+├── tsconfig.json                 # TypeScript configuration
+├── README.md                      # Project documentation
+└── FRONTEND_SETUP.txt            # Setup guide
 ```
 
 ---
@@ -384,9 +469,138 @@ Contributions are welcome! Please follow these guidelines:
 
 ## 🐛 Known Issues
 
-- First AI request may take 30+ seconds (model loading)
-- OCR struggles with handwritten reports
-- Groq Token Limit
+1. "VITE_GROQ_API_KEY is not defined"
+
+Problem: App can't find your Groq API key
+
+Solution:
+
+Bash
+
+
+# Create .env file
+echo "VITE_GROQ_API_KEY=your-key-here" > .env
+
+# Restart dev server
+pnpm dev
+
+
+
+2. "Cannot find module" or "pnpm: command not found"
+
+Problem: Dependencies not installed or pnpm not found
+
+Solution:
+
+Bash
+
+
+# Reinstall pnpm globally
+npm install -g pnpm
+
+# Clean install dependencies
+rm -rf node_modules
+pnpm install
+
+# Start again
+pnpm dev
+
+
+
+3. "Port 3000 already in use"
+
+Problem: Another application is using port 3000
+
+Solution:
+
+Bash
+
+
+# Use a different port
+pnpm dev --port 3001
+
+# Or kill the process on port 3000
+# Windows: netstat -ano | findstr :3000
+# Mac/Linux: lsof -i :3000
+
+
+
+4. "Failed to extract text from image"
+
+Problem: OCR couldn't read the image
+
+Solution:
+
+•
+Use a clearer, higher-quality image
+
+•
+Ensure text is readable (not blurry or rotated)
+
+•
+Try a different file format (PDF instead of JPG)
+
+•
+Check file size (must be under 10MB)
+
+5. "Groq API request failed"
+
+Problem: API key is invalid or rate limited
+
+Solution:
+
+Bash
+
+
+# Verify your API key
+# 1. Visit https://console.groq.com/keys
+# 2. Copy the correct key
+# 3. Update .env file
+# 4. Restart: pnpm dev
+
+
+
+6. "Build fails with TypeScript errors"
+
+Problem: TypeScript compilation errors
+
+Solution:
+
+Bash
+
+
+# Check for errors
+pnpm check
+
+# Fix common issues
+pnpm format
+
+# Clean rebuild
+rm -rf dist node_modules
+pnpm install
+pnpm build
+
+
+
+Debug Mode
+
+Enable detailed logging:
+
+TypeScript
+
+
+// In groqService.ts
+const DEBUG = true;
+
+if (DEBUG ) {
+  console.log('Extracted text:', extractedText);
+  console.log('API response:', response);
+  console.log('Parsed result:', result);
+}
+
+
+
+
 
 See [Issues](https://github.com/aditya8975/medicare8975/issues) for full list.
 
