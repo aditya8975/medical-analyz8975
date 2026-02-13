@@ -6,7 +6,7 @@
 
 AI Medical Report Analyzer helps users understand their medical test results by:
 - 🔍 **Extracting data** from medical reports using OCR technology
-- 🤖 **Analyzing metrics** with Mixtral AI (8x7B model)
+- 🤖 **Analyzing metrics** with llama-3.3-70b-versatile
 - ⚠️ **Predicting health risks** based on established medical ranges
 - 💡 **Generating recommendations** for preventive healthcare
 
