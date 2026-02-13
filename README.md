@@ -16,149 +16,17 @@ AI Medical Report Analyzer helps users understand their medical test results by:
 
 📤 File Upload
 
-•
-Drag-and-drop interface for easy file upload
-
-•
-Multiple format support: PDF, JPG, PNG
-
-•
-File validation with size limits (max 10MB)
-
-•
-Real-time feedback with loading states
-
 🔍 OCR Text Extraction
-
-•
-Tesseract.js for image text extraction
-
-•
-PDF.js for PDF document processing
-
-•
-Automatic language detection (English optimized)
-
-•
-Error handling for corrupted or unclear images
 
 🤖 AI-Powered Analysis
 
-•
-Groq API integration (Mixtral 8x7B model)
-
-•
-Automatic blood metric detection (glucose, cholesterol, etc.)
-
-•
-Intelligent pattern recognition from medical reports
-
-•
-Structured JSON responses for reliable parsing
-
 📊 Blood Metrics Extraction
-
-Automatically detects and displays:
-
-•
-Glucose (Fasting/Random)
-
-•
-Cholesterol (Total, LDL, HDL)
-
-•
-Triglycerides
-
-•
-HbA1c (Glycated Hemoglobin)
-
-•
-Blood Pressure (Systolic/Diastolic)
-
-•
-Complete Blood Count (WBC, RBC, Hemoglobin, Hematocrit, Platelets)
-
-•
-Liver Function Tests (ALT, AST, Bilirubin)
-
-•
-Kidney Function Tests (Creatinine, BUN)
-
-•
-Thyroid Function (TSH, T3, T4)
-
-•
-And more...
 
 ⚠️ Health Risk Assessment
 
-•
-Potential condition detection based on abnormal values
-
-•
-Severity levels: Low, Moderate, High, Critical
-
-•
-Risk percentage calculation
-
-•
-Detailed explanations for each risk
-
-•
-Color-coded indicators for easy interpretation
-
 💡 Personalized Recommendations
 
-•
-Actionable health advice based on test results
-
-•
-Lifestyle modifications suggestions
-
-•
-Dietary recommendations
-
-•
-Follow-up testing guidance
-
-•
-When to consult healthcare providers
-
-🎨 Professional Medical UI
-
-•
-Clean, intuitive interface designed for healthcare
-
-•
-Responsive design works on desktop, tablet, mobile
-
-•
-Medical color scheme (blues, whites, greens)
-
-•
-Accessibility features for better usability
-
-•
-Real-time notifications with toast messages
-
 🔒 Privacy & Security
-
-•
-No data storage - Results displayed only
-
-•
-No user accounts - Direct access, no login required
-
-•
-No history tracking - Each analysis is independent
-
-•
-Client-side processing - All computation in browser
-
-•
-No external logging - Your data stays private
-
-
 
 ---
 
@@ -167,13 +35,13 @@ No external logging - Your data stays private
 ### Upload Interface
 ![Upload Screen](doc/screenshot/medi2.PNG)
 *Clean, intuitive interface for uploading medical reports*
-
+![Upload Screen](doc/screenshot/Capture.PNG)
 ### Analysis Results
-![Results Screen](docs/screenshots/results.png)
+![Results Screen](doc/screenshot/medi6.PNG)
 *Detailed breakdown of health metrics, risks, and recommendations*
-
+![Results Screen](doc/screenshot/medical7.PNG)
 ### Risk Visualization
-![Risk Assessment](docs/screenshots/risk-assessment.png)
+![Risk Assessment](doc/screenshot/medi66.PNG)
 *Visual risk indicators with percentage-based scoring*
 
 ---
