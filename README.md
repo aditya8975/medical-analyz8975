@@ -363,13 +363,13 @@ Contributions are welcome! Please follow these guidelines:
 
 ### Version 1.0 (Current) ✅
 - [x] Basic OCR extraction
-- [x] AI analysis with Mixtral
+- [x] AI analysis 
+- [ ] Export results as PDF
 - [x] Risk assessment
 - [x] Responsive UI
 
 ### Version 1.1 (Planned)
 - [ ] Analysis history with localStorage
-- [ ] Export results as PDF
 - [ ] Multiple report comparison
 - [ ] Graph visualizations
 
@@ -406,9 +406,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@your-username](https://github.com/aditya8975)
-- LinkedIn: [Your Profile](https://www.linkedin.com/in/adityakatare35)
-- Portfolio: [yourwebsite.com](https://adkatareport.onrender.com/index.html)
+- GitHub: [@aditya8975](https://github.com/aditya8975)
+- LinkedIn: [AdityaKatare](https://www.linkedin.com/in/adityakatare35)
+- Portfolio: [AdityaKatare](https://adkatareport.onrender.com/index.html)
 
 ---
 
@@ -422,25 +422,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 💡 Use Cases
-
-### For Developers
-- Portfolio project showcasing AI integration
-- Learning OCR and NLP technologies
-- Understanding healthcare tech applications
-
-### For Users
-- Quick understanding of medical test results
-- Health risk awareness
-- Preparation for doctor consultations
-- Tracking health metrics over time
-
-### For Students
-- Learning project for medical informatics
-- AI/ML practical application
-- Healthcare technology research
-
----
 
 
 ## 📞 Support
