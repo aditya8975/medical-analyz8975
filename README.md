@@ -165,7 +165,7 @@ No external logging - Your data stays private
 ## 🖼️ Screenshots
 
 ### Upload Interface
-![Upload Screen](doc/screenshot/medi2.png)
+![Upload Screen](doc/screenshot/medi2.PNG)
 *Clean, intuitive interface for uploading medical reports*
 
 ### Analysis Results
