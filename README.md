@@ -103,12 +103,8 @@ Application runs at `http://localhost:3000`
 
 ## 🔑 Configuration
 
-Environment Variables
-
 Create a .env file in the project root:
 
-Plain Text
-# Groq API Configuration
 # Get your free API key from: https://console.groq.com/keys
 VITE_GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxx
 
