@@ -165,7 +165,7 @@ No external logging - Your data stays private
 ## 🖼️ Screenshots
 
 ### Upload Interface
-![Upload Screen](docs/screenshots/upload.png)
+![Upload Screen](/medi2.png)
 *Clean, intuitive interface for uploading medical reports*
 
 ### Analysis Results
@@ -219,8 +219,8 @@ npm >= 8.0.0
 ### Quick Start
 ```bash
 # Clone repository
-git clone https://github.com/your-username/medical-report-analyzer.git
-cd medical-report-analyzer
+git clone https://github.com/aditya8975/medical-analyz8975.git
+cd medical-analyz8975
 
 # Install dependencies
 npm install
@@ -240,73 +240,9 @@ Environment Variables
 Create a .env file in the project root:
 
 Plain Text
-
-
 # Groq API Configuration
 # Get your free API key from: https://console.groq.com/keys
 VITE_GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxx
-
-
-
-Vite Configuration
-
-TypeScript
-
-
-// vite.config.ts
-export default defineConfig({
-  plugins: [react( ), tailwindcss()],
-  server: {
-    port: 3000,
-    open: true,
-  },
-  build: {
-    outDir: path.resolve(__dirname, 'dist'),
-    emptyOutDir: true,
-  },
-})
-
-
-
-Tailwind CSS
-
-Configured in client/src/index.css:
-
-CSS
-
-
-@import "tailwindcss";
-
-/* Medical color scheme */
-/* Blues: Primary actions and info */
-/* Greens: Success and normal status */
-/* Reds: Warnings and high risk */
-/* Oranges: Moderate risk */
-
-
-
-
-
-
-🔧 Available Commands
-
-Bash
-
-
-# Development
-pnpm dev              # Start development server (http://localhost:3000 )
-pnpm dev --port 3001 # Use different port
-
-# Production
-pnpm build            # Build for production
-pnpm preview          # Preview production build locally
-
-# Utilities
-pnpm check            # Type check with TypeScript
-pnpm format           # Format code with Prettier
-
-
-
 
    ```
 
@@ -542,7 +478,7 @@ vercel --prod
 npm install gh-pages --save-dev
 
 # Add to package.json:
-"homepage": "https://your-username.github.io/medical-report-analyzer",
+"homepage": "https://your-username.github.io/medical-analyz8975",
 "scripts": {
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build"
@@ -598,7 +534,7 @@ Contributions are welcome! Please follow these guidelines:
 ---
 
 
-See [Issues](https://github.com/aditya8975/medicare8975/issues) for full list.
+See [Issues](https://github.com/aditya8975/medical-analyz8975/issues) for full list.
 
 ---
 
@@ -625,10 +561,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Project Stats
 
-![GitHub stars](https://img.shields.io/github/stars/aditya8975/medicare8975)
-![GitHub forks](https://img.shields.io/github/forks/aditya8975/medicare8975)
-![GitHub issues](https://img.shields.io/github/issues/aditya8975/medicare8975)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/aditya8975/medicare8975)
+![GitHub stars](https://img.shields.io/github/stars/aditya8975/medical-analyz8975)
+![GitHub forks](https://img.shields.io/github/forks/aditya8975/medical-analyz8975)
+![GitHub issues](https://img.shields.io/github/issues/aditya8975/medical-analyz8975)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/aditya8975/medical-analyz8975)
 
 ---
 
@@ -639,7 +575,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Need help? Here's how to get support:
 
 1. **Check Documentation** - Review the [docs](docs/) folder
-2. **Search Issues** - Look for similar problems in [Issues](https://github.com/your-username/medicare8975r/issues)
+2. **Search Issues** - Look for similar problems in [Issues](https://github.com/your-username/medical-analyz8975/issues)
 3. **Ask Questions** - Open a new issue with the "question" label
 4. **Contact** - Reach out via email or LinkedIn
 
@@ -655,8 +591,8 @@ If this project helped you, please give it a ⭐!
 
 **Built with ❤️ for better healthcare accessibility**
 
-[Report Bug](https://github.com/aditya8975/medicare8975/issues) · 
-[Request Feature](https://github.com/aditya8975/medicare8975/issues) · 
+[Report Bug](https://github.com/aditya8975/medical-analyz8975/issues) · 
+[Request Feature](https://github.com/aditya8975/medical-analyz8975/issues) · 
 [View Demo](https://medicare8975.vercel.app/)
 
 </div>
