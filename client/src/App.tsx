@@ -1224,7 +1224,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-300 pt-8 text-center text-sm text-gray-600">
-            <p>&copy; 2026 Medicare AI. All rights reserved. Built with ❤️ for better healthcare.</p>
+            <p>&copy; 2026 Medicare AI. All rights reserved.</p>
           </div>
         </div>
       </footer>
