@@ -33,15 +33,15 @@ AI Medical Report Analyzer helps users understand their medical test results by:
 ## 🖼️ Screenshots
 
 ### Upload Interface
-![Upload Screen](doc/screenshot/medi2.PNG)
+![Upload Screen](doc/screenshot/newMedi1.PNG)
 *Clean, intuitive interface for uploading medical reports*
-![Upload Screen](doc/screenshot/Capture.PNG)
+![Upload Screen](doc/screenshot/newMedi2.PNG)
 ### Analysis Results
-![Results Screen](doc/screenshot/medi6.PNG)
+![Results Screen](doc/screenshot/newMedi3.PNG)
 *Detailed breakdown of health metrics, risks, and recommendations*
-![Results Screen](doc/screenshot/medical7.PNG)
+![Results Screen](doc/screenshot/newmedi5.PNG)
 ### Risk Visualization
-![Risk Assessment](doc/screenshot/medi66.PNG)
+![Risk Assessment](doc/screenshot/newmedi6.PNG)
 *Visual risk indicators with percentage-based scoring*
 
 ---
