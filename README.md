@@ -455,6 +455,6 @@ If this project helped you, please give it a ⭐!
 
 [Report Bug](https://github.com/aditya8975/medical-analyz8975/issues) · 
 [Request Feature](https://github.com/aditya8975/medical-analyz8975/issues) · 
-[View Demo](https://medicare8975.vercel.app/)
+[View Demo](https://medical-analyz897553.vercel.app/)
 
 </div>
