@@ -48,7 +48,7 @@ AI Medical Report Analyzer helps users understand their medical test results by:
 
 ## 🚀 Demo
 
-**[Live Demo](https://medicare8975.vercel.app/)** |
+**[Live Demo](medical-analyz897553.vercel.app/)** |
 
 Try it with the included sample report:
 ```bash
